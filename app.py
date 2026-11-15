@@ -93,20 +93,23 @@ def load_model_package():
 try:
     model_package = load_model_package()
     best_model = model_package["model"]
+
 except FileNotFoundError:
-            selected_state = st.selectbox("Select State", state_options)
+    best_model = None
+    with col1:
+        selected_state = st.selectbox("Select State", state_options)
 
         area_options = get_areas_for_state(selected_state)
         selected_area = st.selectbox("Select City / Area", area_options)
 
         stations = st.number_input(
-            "Number of Monitoring Stations",
-            min_value=1,
-            max_value=100,
-            value=5,
-            step=1
-        )
-
+        "Number of Monitoring Stations",
+        min_value=1,
+        max_value=100,
+        value=5,
+        step=1
+    )
+        
     with col2:
         selected_pollutant = st.selectbox(
             "Prominent Pollutant",
