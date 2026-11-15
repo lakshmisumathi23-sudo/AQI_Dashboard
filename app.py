@@ -122,7 +122,7 @@ with col2:
             value=date.today()
         )
 
-    submitted = st.form_submit_button(
+submitted = st.form_submit_button(
         "CALCULATE AQI",
         use_container_width=True
     )
