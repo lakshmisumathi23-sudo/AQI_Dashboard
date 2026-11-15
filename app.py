@@ -24,7 +24,7 @@ st.set_page_config(
 )
 
 MODEL_PATH = "indian_aqi_prediction_package.pkl"
-DATA_PATH = "aqi.csv"
+DATA_PATH = "locations.csv"
 
 
 # -------------------- SIMPLE BLUE-WHITE DESIGN --------------------
